@@ -196,7 +196,7 @@
                                 You're in the right Place.
                             </h2>
                             <p class="mb-4 text-sm text-gray-600 font-bold">
-                                Ventrix, or Vendors Metrics, is designed to deliver valuable insights tailored to support informed
+                                Merx, or Vendors Metrics, is designed to deliver valuable insights tailored to support informed
                                 decision-making, ensuring your business decisions are strategic and impactful.
                             </p>
                         </div>

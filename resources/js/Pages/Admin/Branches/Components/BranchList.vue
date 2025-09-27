@@ -100,7 +100,7 @@
                             {{ isLoading ? 'Disabled...' : 'Remove Branch' }}
                         </button>
                         <Link :disabled="isLoading"
-                            :href="route('franchisee.branches.statistics', { branch_id: branch.branch_id })"
+                            :href="route('admin.branches.statistics', { branch_id: branch.branch_id })"
                             class="transition text-white bg-gray-400 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
                             title="Show Branch Statistics">
                             {{ isLoading ? 'Disabled...' : 'Show Branch Statistics' }}
@@ -179,7 +179,7 @@
         isLoading.value     = true;
 
         axios
-            .get(route('franchisee.branches.branchTransactions'), {
+            .get(route('admin.branches.branchTransactions'), {
                 params: { branch_id: branchId },
             })
             .then((response) => {
@@ -187,7 +187,7 @@
             });
 
         axios
-            .get(route('franchisee.branches.branchSales'), {
+            .get(route('admin.branches.branchSales'), {
                 params: { branch_id: branchId },
             })
             .then((response) => {
@@ -208,7 +208,7 @@
         isLoading.value = true;
         searchQuery.value = '';
 
-        router.visit(route('franchisee.branches.index'), {
+        router.visit(route('admin.branches.index'), {
             method: 'get',
             data: {
             },
@@ -249,7 +249,7 @@
             return;
         }
 
-        router.visit(route('franchisee.branches.index'), {
+        router.visit(route('admin.branches.index'), {
             method: 'get',
             data: {
                 search: searchQuery.value
@@ -281,7 +281,7 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 axios
-                    .post(route('franchisee.branches.remove'), { branch_id: branch.branch_id })
+                    .post(route('admin.branches.remove'), { branch_id: branch.branch_id })
                     .then((response) => {
                         if (response.data.success) {
                             Swal.fire({

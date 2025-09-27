@@ -316,7 +316,7 @@
         </div>
         <div class="flex flex-col gap-2">
             <div class="flex justify-center">
-                <Link type="button" :href="route('franchisee.transactions-reports.index')"
+                <Link type="button" :href="route('admin.transactions-reports.index')"
                     title="Go to Transactions Reports"
                     class="m-1 max-w-56 flex items-center justify-center space-x-2 text-emerald-700 bg-white border-emerald-700 border hover:bg-emerald-700 hover:text-white transition-colors focus:ring-4 focus:ring-emerald-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-emerald-600 dark:hover:bg-emerald-500 focus:outline-none dark:focus:ring-emerald-800">
                     <span>
@@ -330,7 +330,7 @@
                         Products
                     </span>
                 </Link>
-                <Link type="button" :href="route('franchisee.sales-reports.index')"
+                <Link type="button" :href="route('admin.sales-reports.index')"
                     title="Go to Sales Reports"
                     class="m-1 max-w-56 flex items-center justify-center space-x-2 text-emerald-700 bg-white border-emerald-700 border hover:bg-emerald-700 hover:text-white transition-colors focus:ring-4 focus:ring-emerald-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-emerald-600 dark:hover:bg-emerald-500 focus:outline-none dark:focus:ring-emerald-800">
                     <span>

@@ -8,7 +8,7 @@
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
             <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-emerald-700 dark:text-white">
                 <img class="size-6 mr-2" src="../../../../public/favicon.ico" alt="logo">
-                Ventrix
+                Merx
             </a>
             <div
                 class="shadow-2xl shadow-emerald-800 border border-emerald-100 w-full bg-white rounded-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">

@@ -382,7 +382,7 @@
             }
         }
 
-        router.visit(route('franchisee.sales-reports.index'), {
+        router.visit(route('admin.sales-reports.index'), {
             method: 'get',
             data: {
                 branch_ids: selectedBranches.value.length > 0 ? selectedBranches.value : null,
@@ -421,7 +421,7 @@
             return;
         }
 
-        router.visit(route('franchisee.sales-reports.index'), {
+        router.visit(route('admin.sales-reports.index'), {
             method: 'get',
             data: {
                 branch_ids: selectedBranches.value.length > 0 ? selectedBranches.value : null,
@@ -451,7 +451,7 @@
         endDate.value          = '';
         searchQuery.value      = '';
 
-        router.visit(route('franchisee.sales-reports.index'), {
+        router.visit(route('admin.sales-reports.index'), {
             method: 'get',
             data: {
             },
@@ -500,7 +500,7 @@
         const activeStatuses = Object.keys(selectedStatuses.value).filter(status => selectedStatuses.value[status]);
 
         if (!page) return;
-        router.visit(route('franchisee.sales-reports.index'), {
+        router.visit(route('admin.sales-reports.index'), {
             method: 'get',
             data: {
                 page,

@@ -33,7 +33,7 @@ class BranchesController extends Controller
                     ->where('fub.user_id', $currentUser->id)
                     ->get();
 
-        return Inertia::render('Franchisee/Branches/BranchesIndex', ['branches' => $branches]);
+        return Inertia::render('Admin/Branches/BranchesIndex', ['branches' => $branches]);
     }
 
     public function removeBranch(Request $request)
@@ -110,6 +110,6 @@ class BranchesController extends Controller
 
     public function statistics(Request $request)
     {
-        return Inertia::render('Franchisee/Branches/BranchStatisticsIndex', []);
+        return Inertia::render('Admin/Branches/BranchStatisticsIndex', []);
     }
 }

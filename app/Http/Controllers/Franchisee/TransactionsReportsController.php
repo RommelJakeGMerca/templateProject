@@ -58,7 +58,7 @@ class TransactionsReportsController extends Controller
                     ->orderBy('b.id', 'ASC')
                     ->paginate(10);
 
-        return Inertia::render('Franchisee/Reports/TransactionsReportIndex', [
+        return Inertia::render('Admin/Reports/TransactionsReportIndex', [
             'transactionsReport' => $transactionsReport,
             'branches'           => $branches,
         ]);

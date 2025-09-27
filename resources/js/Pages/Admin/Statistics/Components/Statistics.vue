@@ -96,7 +96,7 @@
         }
 
         if (selectedMonth && selectedYear) {
-            router.get(route('franchisee.statistics.index'), {
+            router.get(route('admin.statistics.index'), {
                     month : selectedMonth.value,
                     year : selectedYear.value,
                 }, {
@@ -110,7 +110,7 @@
         selectedMonth.value = '';
         selectedYear.value  = '';
 
-        router.visit(route('franchisee.statistics.index'), {
+        router.visit(route('admin.statistics.index'), {
             method: 'get',
             data: {
             },

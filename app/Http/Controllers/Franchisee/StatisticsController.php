@@ -25,7 +25,7 @@ class StatisticsController extends Controller
         $transactionsChartData = $this->getTransactionsChart($userBranches, $branches, $month, $year);
         $salesTotals           = $this->getSalesTotals($userBranches, $month, $year);
 
-        return Inertia::render('Franchisee/Statistics/StatisticsIndex', [
+        return Inertia::render('Admin/Statistics/StatisticsIndex', [
             'branches' => $branches,
             'salesChartData' => $salesChartData,
             'transactionsChartData' => $transactionsChartData,

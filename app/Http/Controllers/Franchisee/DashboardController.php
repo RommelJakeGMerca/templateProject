@@ -17,7 +17,7 @@ class DashboardController extends Controller
         $paidSales            = $this->getSalesData($userBranches);
         $finishedTransactions = $this->getTransactionData($userBranches);
 
-        return Inertia::render('Franchisee/Dashboard/DashboardIndex', [
+        return Inertia::render('Admin/Dashboard/DashboardIndex', [
             'userBranches'         => $userBranches,
             'paidSales'            => $paidSales,
             'finishedTransactions' => $finishedTransactions

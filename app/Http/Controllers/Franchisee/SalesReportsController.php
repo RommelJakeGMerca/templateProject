@@ -70,7 +70,7 @@ class SalesReportsController extends Controller
 
         $salesReports = $salesReportsQuery->paginate(10);
 
-        return Inertia::render('Franchisee/Reports/SalesReportIndex', [
+        return Inertia::render('Admin/Reports/SalesReportIndex', [
             'salesReports' => $salesReports,
             'branches'     => $branches,
         ]);
