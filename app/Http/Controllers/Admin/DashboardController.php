@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Franchisee;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -17,7 +17,7 @@ class DashboardController extends Controller
         $paidSales            = $this->getSalesData($userBranches);
         $finishedTransactions = $this->getTransactionData($userBranches);
 
-        return Inertia::render('Admin/Dashboard/DashboardIndex', [
+        return Inertia::render('Admin/Dashboard', [
             'userBranches'         => $userBranches,
             'paidSales'            => $paidSales,
             'finishedTransactions' => $finishedTransactions

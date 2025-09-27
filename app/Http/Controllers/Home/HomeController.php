@@ -16,11 +16,10 @@ class HomeController extends Controller
             if (Auth::user()->role_id == 1) {
                 return redirect()->route('admin.dashboard.index');
             }
-            // Add more role checks here if necessary
-            // Example for an admin:
-            // if (Auth::user()->role_id == 1) {
-            //     return redirect()->route('admin.dashboard');
-            // }
+
+            if (Auth::user()->role_id == 2) {
+                return redirect()->route('user.dashboard.index');
+            }
         }
 
         // Render the Welcome page for guests
