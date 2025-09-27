@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Http\Controllers\Home;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
+use Illuminate\Foundation\Application;
+
+class HomeController extends Controller
+{
+    public function home()
+    {
+        if (Auth::check()) {
+            if (Auth::user()->role_id == 1) {
+                return redirect()->route('admin.dashboard.index');
+            }
+            // Add more role checks here if necessary
+            // Example for an admin:
+            // if (Auth::user()->role_id == 1) {
+            //     return redirect()->route('admin.dashboard');
+            // }
+        }
+
+        // Render the Welcome page for guests
+        return Inertia::render('Auth/Login', [
+            'canLogin'       => app('router')->has('login'),
+            'canRegister'    => app('router')->has('register'),
+            'laravelVersion' => Application::VERSION,
+            'phpVersion'     => PHP_VERSION,
+        ]);
+    }
+}
