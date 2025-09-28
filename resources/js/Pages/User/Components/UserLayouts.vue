@@ -12,17 +12,8 @@ onMounted(() => {
 
 </script>
 <template>
-    <Hero></Hero>
-    <!-- header -->
     <Header></Header>
-    <!-- end -->
-    <!-- main content -->
-    
+    <Hero></Hero>
     <slot />
-    <!-- end -->
-    <!-- footer -->
-
     <Footer></Footer>
-
-    <!-- end -->
 </template>
