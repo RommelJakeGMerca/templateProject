@@ -212,7 +212,7 @@
     import { ref, onMounted } from 'vue';
     import axios from 'axios';
     import { initFlowbite } from 'flowbite';
-    import AdminLayout from '../Components/AdminLayout.vue';
+    import AdminLayout from './Components/AdminLayout.vue';
     import { Link } from '@inertiajs/vue3';
 
     const props = defineProps({
